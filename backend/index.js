@@ -6,7 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const notesRoutes = require('./routes/notesRoutes');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const path = require('path'); // Add this line
 const app = express();
 
 // Middleware
