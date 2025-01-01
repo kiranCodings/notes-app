@@ -1,0 +1,140 @@
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-container {
+    background: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    animation: slideUp 0.3s ease;
+  }
+  
+  .modal-header {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    padding: 1.5rem 2rem;
+    position: relative;
+  }
+  
+  .modal-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    padding:0px 0px 4px 0px !important;
+
+  }
+  
+  .modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%);
+  }
+  
+  .modal-content {
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 180px);
+  }
+  
+  .content-wrapper {
+    color: #1f2937;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .category-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: #f3f4f6;
+    border-radius: 12px;
+    color: #4b5563;
+    font-weight: 500;
+  }
+  
+  .category-icon {
+    font-size: 1.25rem;
+  }
+  
+  .meta-info {
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 1.5rem;
+    color: #6b7280;
+  }
+  
+  .timestamp {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .meta-icon {
+    opacity: 0.7;
+  }
+  
+  /* New class for meta row */
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

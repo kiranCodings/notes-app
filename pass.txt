@@ -1,0 +1,2 @@
+mongodb - ceredentials:
+admin:admin@123
